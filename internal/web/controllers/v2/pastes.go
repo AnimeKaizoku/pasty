@@ -105,6 +105,11 @@ type endpointCreatePastePayload struct {
 
 // endpointCreatePaste handles the 'POST /v2/pastes' endpoint
 func endpointCreatePaste(ctx *fasthttp.RequestCtx) {
+	var hasAuthToken bool = false
+	var authToken string = string(ctx.Request.Header.Peek("authorization"))
+	if authToken != "" {
+		hasAuthToken = true
+	}
 	// Read, parse and validate the request payload
 	payload := new(endpointCreatePastePayload)
 	if err := json.Unmarshal(ctx.PostBody(), payload); err != nil {
@@ -131,15 +136,30 @@ func endpointCreatePaste(ctx *fasthttp.RequestCtx) {
 		return
 	}
 
+	authVerify := func(token string) bool {
+		for _, j := range config.Current.AuthorizationTokens {
+			if j == token {
+				return false
+			}
+		}
+		return true
+	}
+
 	// Prepare the paste object
 	if payload.Metadata == nil {
 		payload.Metadata = map[string]interface{}{}
 	}
+	var canDelete bool = true
+	if hasAuthToken {
+		canDelete = authVerify(authToken)
+	}
+
 	paste := &shared.Paste{
-		ID:       id,
-		Content:  payload.Content,
-		Created:  time.Now().Unix(),
-		Metadata: payload.Metadata,
+		ID:        id,
+		Content:   payload.Content,
+		Created:   time.Now().Unix(),
+		Metadata:  payload.Metadata,
+		CanDelete: canDelete,
 	}
 
 	// Create a new modification token if enabled

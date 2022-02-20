@@ -14,6 +14,7 @@ type Paste struct {
 	ModificationToken string                 `json:"modificationToken,omitempty" bson:"modificationToken"`
 	Created           int64                  `json:"created" bson:"created"`
 	Metadata          map[string]interface{} `json:"metadata" bson:"metadata"`
+	CanDelete         bool                   `json:"canDelete,omitempty" bson:"canDelete"`
 }
 
 // HashModificationToken hashes the current modification token of a paste
