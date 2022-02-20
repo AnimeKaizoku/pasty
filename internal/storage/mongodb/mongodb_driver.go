@@ -156,6 +156,9 @@ func (driver *MongoDBDriver) Cleanup() (int, error) {
 		if err != nil {
 			return 0, err
 		}
+		if !paste.CanDelete {
+			continue
+		}
 
 		// Delete the paste if it is expired
 		lifetime := config.Current.AutoDelete.Lifetime

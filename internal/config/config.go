@@ -27,6 +27,7 @@ type Config struct {
 	Postgres                    *PostgresConfig
 	MongoDB                     *MongoDBConfig
 	S3                          *S3Config
+	AuthorizationTokens         []string
 }
 
 // AutoDeleteConfig represents the configuration specific for the AutoDelete behaviour
@@ -77,7 +78,11 @@ var Current *Config
 // Load loads the current config from environment variables and an optional .env file
 func Load() {
 	env.Load()
-
+	var authTokens []string
+	d := strings.Split(env.MustString("AUTHORIZATION_TOKENS", ""), ",")
+	for _, i := range d {
+		authTokens = append(authTokens, i)
+	}
 	Current = &Config{
 		WebAddress:                  env.MustString("WEB_ADDRESS", ":8080"),
 		StorageType:                 shared.StorageType(strings.ToLower(env.MustString("STORAGE_TYPE", "file"))),
@@ -120,5 +125,6 @@ func Load() {
 			Region:          env.MustString("STORAGE_S3_REGION", ""),
 			Bucket:          env.MustString("STORAGE_S3_BUCKET", "pasty"),
 		},
+		AuthorizationTokens: authTokens,
 	}
 }
