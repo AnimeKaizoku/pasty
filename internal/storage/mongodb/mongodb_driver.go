@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

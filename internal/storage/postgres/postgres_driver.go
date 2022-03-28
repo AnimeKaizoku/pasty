@@ -11,8 +11,8 @@ import (
 	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/johejo/golang-migrate-extra/source/iofs"
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
 )
 
 //go:embed migrations/*.sql

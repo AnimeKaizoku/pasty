@@ -4,9 +4,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/shared"
-	"github.com/lus/pasty/internal/storage"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/storage"
 )
 
 func main() {

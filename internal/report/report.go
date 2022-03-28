@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/lus/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/config"
 	"github.com/valyala/fasthttp"
 )
 

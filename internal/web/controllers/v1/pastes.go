@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/fasthttp/router"
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/shared"
-	"github.com/lus/pasty/internal/storage"
-	"github.com/lus/pasty/internal/utils"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/storage"
+	"github.com/AnimeKaizoku/pasty/internal/utils"
 	limitFasthttp "github.com/ulule/limiter/v3/drivers/middleware/fasthttp"
 	"github.com/valyala/fasthttp"
 )

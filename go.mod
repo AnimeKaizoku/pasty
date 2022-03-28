@@ -1,4 +1,4 @@
-module github.com/lus/pasty
+module github.com/AnimeKaizoku/pasty
 
 go 1.16
 

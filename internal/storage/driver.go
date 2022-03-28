@@ -3,12 +3,12 @@ package storage
 import (
 	"fmt"
 
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/shared"
-	"github.com/lus/pasty/internal/storage/file"
-	"github.com/lus/pasty/internal/storage/mongodb"
-	"github.com/lus/pasty/internal/storage/postgres"
-	"github.com/lus/pasty/internal/storage/s3"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/storage/file"
+	"github.com/AnimeKaizoku/pasty/internal/storage/mongodb"
+	"github.com/AnimeKaizoku/pasty/internal/storage/postgres"
+	"github.com/AnimeKaizoku/pasty/internal/storage/s3"
 )
 
 // Current holds the current storage driver

@@ -1,8 +1,8 @@
 package storage
 
 import (
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/utils"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/utils"
 )
 
 // AcquireID generates a new unique ID

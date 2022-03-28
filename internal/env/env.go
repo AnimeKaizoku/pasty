@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/joho/godotenv"
-	"github.com/lus/pasty/internal/static"
+	"github.com/AnimeKaizoku/pasty/internal/static"
 )
 
 // Load loads an optional .env file

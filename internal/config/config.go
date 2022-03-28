@@ -4,8 +4,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lus/pasty/internal/env"
-	"github.com/lus/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/env"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
 )
 
 // Config represents the general application configuration structure

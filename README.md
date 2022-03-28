@@ -20,14 +20,9 @@ Pasty is a fast and lightweight code pasting server
 
 ## Support
 
-As pasty is an open source project on GitHub you can open an [issue](https://github.com/lus/pasty/issues) whenever you encounter a problem or feature request.
+As pasty is an open source project on GitHub you can open an [issue](https://github.com/AnimeKaizoku/pasty/issues) whenever you encounter a problem or feature request.
 However, it may be annoying to open an issue just to ask a simple question about pastys functionalities, get help with the installation process or mention something about the hosted version.
-This is why I created a simple [Discord server](https://go.lus.pm/discord) you may want to join to get an answer to stuff like that pretty quickly.
-
-## Disclaimer
-
-The pasty web frontend comes with some service-related links in it (Discord server). Of course, you are allowed to remove these references.
-However, a small reference to pasty would be nice ^^.
+Go to [Kaizoku Support](https://t.dog/KaizokuBots) on Telegram for any support needs
 
 ## Installation
 
@@ -38,7 +33,7 @@ To build pasty from source make sure you have [Go](https://go.dev) installed.
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/lus/pasty
+git clone https://github.com/AnimeKaizoku/pasty
 ```
 
 2. Switch directory:
@@ -141,3 +136,8 @@ Every single one of them has its own configuration variables:
 | `PASTY_STORAGE_S3_SECURE`            | `true`        | `bool`   | Defines whether or not SSL should be used for the S3 connection                           |
 | `PASTY_STORAGE_S3_REGION`            | `<empty>`     | `string` | Defines the region of the S3 storage                                                      |
 | `PASTY_STORAGE_S3_BUCKET`            | `pasty`       | `string` | Defines the name of the S3 bucket (has to be created before setup)                        |
+
+
+
+This repo is a fork of [Lus - Pasty](https://github.com/lus/pasty) and the credit for the code goes to the original author 
+The sponsor link points to Lus - please do sponsor them

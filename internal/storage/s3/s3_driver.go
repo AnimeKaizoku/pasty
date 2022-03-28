@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 )

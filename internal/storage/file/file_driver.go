@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lus/pasty/internal/config"
-	"github.com/lus/pasty/internal/shared"
+	"github.com/AnimeKaizoku/pasty/internal/config"
+	"github.com/AnimeKaizoku/pasty/internal/shared"
 )
 
 // FileDriver represents the file storage driver

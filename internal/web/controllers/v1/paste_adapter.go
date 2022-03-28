@@ -1,6 +1,6 @@
 package v1
 
-import "github.com/lus/pasty/internal/shared"
+import "github.com/AnimeKaizoku/pasty/internal/shared"
 
 type legacyPaste struct {
 	ID            string `json:"id"`
